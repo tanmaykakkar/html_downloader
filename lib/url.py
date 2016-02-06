@@ -1,8 +1,13 @@
+"""This module is all about url"""
+
+
 class InvalidUrlError(ValueError):
+    """This is exception for invalid urls"""
     pass
 
 
 class Url(object):
+    """This class represent urls and its properties i.e.- scheme, hostname, port etc"""
     def __init__(self, url):
         self.url = url
 
@@ -27,6 +32,7 @@ class Url(object):
         if not is_valid:
             raise InvalidUrlError("URL Invalid: %s" % (_url) )
 
+        # setting all properties after _validating
         self.hostname = parse_result.hostname
         self.path = parse_result.path
         self.scheme = parse_result.scheme

@@ -1,4 +1,7 @@
+"""This module is html_object storing db"""
+
 class NotUniqueError(ValueError):
+    """Exception as name suggests"""
     pass
 
 _html_objs = list()
@@ -11,6 +14,7 @@ def _unique(html_obj):
     return True
 
 def add(html_obj):
+    """Add new html_obj"""
     if _unique(html_obj):
         _html_objs.append(html_obj)
     else:
@@ -21,7 +25,9 @@ def add(html_obj):
         )
 
 def get_all_url_strings():
+    """Return all urls in string"""
     return [obj.url.url for obj in _html_objs]
 
 def get_all():
+    """Return all html objs"""
     return _html_objs

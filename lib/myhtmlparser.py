@@ -1,12 +1,12 @@
 from HTMLParser import HTMLParser
 
-import constants
 
-
-# create a subclass and override the handler methods
 class MyHTMLParser(HTMLParser):
+    """This class is child class of HTMLParser overrides starttag handler"""
 
     def handle_starttag(self, tag, attrs):
+        """find out <a> tag anf href attribute in that for urls"""
+        import constants
         if tag != constants.HTML_TAG_A:
             return
 
@@ -15,16 +15,16 @@ class MyHTMLParser(HTMLParser):
 
         from html import Html
         from url import InvalidUrlError
+
         try:
             html = Html.from_url_string(url_string=url_path)
-
         except InvalidUrlError as e:
             pass
 
         else:
             import db
+
             try:
                 db.add(html)
-
             except db.NotUniqueError as e:
                 pass

@@ -18,7 +18,7 @@ def main():
 
     from lib.html import Html
     from lib.myhtmlparser import MyHTMLParser
-    from lib.file import write_to_file
+    from lib.file import write_to_filesystem
     from lib import db
 
     # fetching cli args
@@ -41,7 +41,7 @@ def main():
     logging.debug('Urls in db are: {0}'.format(urls_in_db))
 
     # after fetching, writing to files
-    [write_to_file(html_obj=obj) for obj in db.get_all()]
+    [write_to_filesystem(html_obj=obj) for obj in db.get_all()]
 
 if __name__ == '__main__':
     main()

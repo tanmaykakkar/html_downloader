@@ -1,4 +1,8 @@
+"""This module is all about html"""
+
+
 class Html(object):
+    """This class is to store html_content and url corr."""
     def __init__(self, html):
         self.html = html
         self.url = None

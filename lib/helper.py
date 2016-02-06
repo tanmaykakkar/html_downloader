@@ -1,4 +1,5 @@
 def config_logging(filehandler=False):
+    """Configure basic logging as per setting"""
     import logging
     import settings
 
