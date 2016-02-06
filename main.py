@@ -1,3 +1,5 @@
+#1/usr/local/env python
+
 def parse_arguments():
     import argparse
 

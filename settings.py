@@ -2,9 +2,9 @@
 # logging settings
 import logging
 
-DEBUG = True
+DEBUG = False
 
-LOG_LEVEL   =    logging.INFO
+LOG_LEVEL   =    logging.DEBUG
 LOG_FILE    =    "html_downloader.log"
 LOG_FORMAT  =    '%(asctime)s [%(levelname)s] %(message)s'
 

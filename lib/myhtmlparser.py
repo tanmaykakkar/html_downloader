@@ -7,6 +7,7 @@ class MyHTMLParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         """find out <a> tag anf href attribute in that for urls"""
         import constants
+        import logging
         if tag != constants.HTML_TAG_A:
             return
 
@@ -19,7 +20,7 @@ class MyHTMLParser(HTMLParser):
         try:
             html = Html.from_url_string(url_string=url_path)
         except InvalidUrlError as e:
-            pass
+            logging.debug(e)
 
         else:
             import db
@@ -27,4 +28,4 @@ class MyHTMLParser(HTMLParser):
             try:
                 db.add(html)
             except db.NotUniqueError as e:
-                pass
+                logging.debug(e)
