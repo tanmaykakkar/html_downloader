@@ -4,7 +4,9 @@ This is to download html files from a url and perform same for newly found valid
 
 ## Setup-
 1. Clone the repo
-2. Modify settings i.e.- HTML_FILES_ROOT (dir to store downloaded files)
+2. Setup virtualenv, if you want 
+3. Install dependencies- pip install requirements.txt
+4. Modify settings i.e.- HTML_FILES_ROOT (dir to store downloaded files)
 
 ## Run-
 1. To run:
