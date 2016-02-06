@@ -18,8 +18,9 @@ python main.py http://www.facebook.com/
 ```{r, engine='bash', Run downloader}
 python main.py -h
 ```
-## Test- 
-Play around with complex urls with a lot of query parameters i.e.- 
+## Test and debug-
+1. Enable logging using settings.DEBUG variable
+2.Play around with complex urls with a lot of query parameters i.e.- 
 http://www.google.ps/search?hl=en&client=firefox-a&hs=42F&rls=org.mozilla%3Aen-US%3Aofficial&q=The+type+%27Microsoft.Practices.ObjectBuilder.Locator%27+is+defined+in+an+assembly+that+is+not+referenced.+You+must+add+a+reference+to+assembly+&aq=f&aqi=&aql=&oq=
 
 ## Result-
@@ -36,6 +37,49 @@ Directory structure will be inside $HTML_FILES_ROOT -
 │           └── b
 │               └── c.html
 ```
+## Example- 
+On run-
+```{r, engine='bash', Run downloader}
+python main.py http://www.facebook.com/
+```
+
+Resulted directory structure- 
+```{r, engine='bash', Run downloader}
+.
+├── bn-in.facebook.com
+│   └── root.html
+├── developers.facebook.com
+│   └── root.html
+├── facebook.com
+│   └── root.html
+├── gu-in.facebook.com
+│   └── root.html
+├── hi-in.facebook.com
+│   └── root.html
+├── kn-in.facebook.com
+│   └── root.html
+├── messenger.com
+│   └── root.html
+├── ml-in.facebook.com
+│   └── root.html
+├── mr-in.facebook.com
+│   └── root.html
+├── pa-in.facebook.com
+│   └── root.html
+├── ta-in.facebook.com
+│   └── root.html
+├── te-in.facebook.com
+│   └── root.html
+├── ur-pk.facebook.com
+│   └── root.html
+└── www.facebook.com
+    ├── help
+    │   └── 568137493302217.html
+    └── root.html
+
+```
+
+
 ## Tools used (env)-
 1. Pychram as IDE
 2. Python shell to test run
