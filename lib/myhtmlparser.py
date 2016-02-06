@@ -1,6 +1,7 @@
 from HTMLParser import HTMLParser
-import logging
+
 import constants
+
 
 # create a subclass and override the handler methods
 class MyHTMLParser(HTMLParser):

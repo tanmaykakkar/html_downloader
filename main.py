@@ -12,13 +12,13 @@ def main():
     import settings
 
     if settings.DEBUG:
-        import helper
+        from lib import helper
         helper.config_logging()
 
-    from html import Html
-    from myhtmlparser import MyHTMLParser
-    from file import write_to_file
-    import db
+    from lib.html import Html
+    from lib.myhtmlparser import MyHTMLParser
+    from lib.file import write_to_file
+    from lib import db
 
     arguments = parse_arguments()
     html = Html.from_url_string(url_string=arguments.url)
