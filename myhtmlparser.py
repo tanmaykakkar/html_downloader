@@ -18,8 +18,12 @@ class MyHTMLParser(HTMLParser):
             html = Html.from_url_string(url_string=url_path)
 
         except InvalidUrlError as e:
-            logging.exception(e)
+            pass
 
         else:
             import db
-            db.html_objs.append(html)
+            try:
+                db.add(html)
+
+            except db.NotUniqueError as e:
+                pass

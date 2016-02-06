@@ -2,8 +2,10 @@
 # logging settings
 import logging
 
-LOG_LEVEL   =    logging.DEBUG
-LOG_FILE    =    "html_downloader.log"
-LOG_FORMAT  =    '%(asctime)s %(message)s'
+DEBUG = True
 
-HTML_FILES_DIR = '~/Codebases/html_downloader/htmls'
+LOG_LEVEL   =    logging.INFO
+LOG_FILE    =    "html_downloader.log"
+LOG_FORMAT  =    '%(asctime)s [%(levelname)s] %(message)s'
+
+HTML_FILES_ROOT = '/Users/tanmaykakkar/Codebases/html_downloader/files'
